@@ -154,7 +154,6 @@ parts:
 apps:
   buzz-fo:
     command: bin/desktop-launch python $SNAP/buzz-0.8.1/main.py
-    slots: [ dbus-svc ]
     desktop: usr/share/applications/buzz.desktop
     environment:
       PATH: $SNAP/usr/bin:$SNAP/bin:$PATH
@@ -205,9 +204,3 @@ layout:
   /usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib:
     bind: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/alsa-lib
 
-
-slots:
-  dbus-svc:
-    interface: dbus
-    bus: session
-    name: Buzz
